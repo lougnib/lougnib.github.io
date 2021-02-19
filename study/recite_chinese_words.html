@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <title>背单词</title>
+  
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="text-center" style="font-size:360px">
+        学
+    </div>
+  </div>
+  <div class="container-fluid"style="position: absolute;bottom: 0;">
+    <div class="row">
+      <div class="col-sm-3" style="padding:0px"><button type="button" class="btn btn-danger" style="width:100%">不会</button></div>
+      <div class="col-sm-3" style="padding:0px"><button type="button" class="btn btn-warning" style="width:100%" onclick="skipWord()">跳过</button></div>
+      <div class="col-sm-3" style="padding:0px"><button type="button" class="btn btn-primary" style="width:100%">会</button></div>
+      <div class="col-sm-3" style="padding:0px"><button type="button" class="btn btn-info" style="width:100%">不用再背</button></div>
+    </div>
+  </div>
+  <script>
+  var users = {
+    "1": "用户1",
+    "2": "用户2",
+    "3": "用户3",
+    "4": "用户4",
+    "5": "用户5"
+  }
+  // 分类
+  var C1 = "汉字";
+  var C2 = "四五快读";
+  var C3 = "成语";
+  var C4 = "唐诗三百首";
+  // 36x36x36 = 46656，足够承载需要掌握的单词数了，汉字和英语都够了。
+  var words = {
+    "W001": { word: "学", tag: C1 + "," + C2},
+    "W002": { word: "系", tag: C1 + "," + C2},
+    "W003": { word: "系", tag: C1 + "," + C2},
+    "_": ""
+  }
+  var currentIndex = "W001";
+  function skipWord() {
+  }
+  </script>
+
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8b5ac53bab8db86721105d9a36367e41";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</body>
+</html>
